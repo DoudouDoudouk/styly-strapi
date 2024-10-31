@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_page_layouts",
+  "info": {
+    "displayName": "PageLayout",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "enumeration",
+      "enum": [
+        "default",
+        "fullWidth",
+        "noSidebar"
+      ],
+      "required": true
+    }
+  }
+}

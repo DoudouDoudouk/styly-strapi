@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_sections_slider_galleries",
+  "info": {
+    "displayName": "SliderGallery",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "images": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

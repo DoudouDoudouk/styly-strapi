@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_elements_faq_items",
+  "info": {
+    "displayName": "FaqItem",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "richtext"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

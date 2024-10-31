@@ -1,0 +1,68 @@
+{
+  "collectionName": "components_layout_footers",
+  "info": {
+    "displayName": "Footer",
+    "icon": "stack",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "copyRightText": {
+      "type": "text"
+    },
+    "pages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "links.link"
+    },
+    "instagramLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "links.link"
+    },
+    "facebookLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "links.link"
+    },
+    "linkedinLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "links.link"
+    },
+    "email": {
+      "type": "component",
+      "repeatable": false,
+      "component": "links.link"
+    },
+    "buttons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.button"
+    },
+    "line1": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "line2": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    }
+  }
+}

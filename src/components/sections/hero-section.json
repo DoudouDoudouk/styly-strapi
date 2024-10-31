@@ -1,0 +1,47 @@
+{
+  "collectionName": "components_sections_hero_sections",
+  "info": {
+    "displayName": "HeroSection",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "description": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "badge": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "highlightedButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.button"
+    },
+    "action": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.button"
+    },
+    "subtext": {
+      "type": "string"
+    }
+  }
+}

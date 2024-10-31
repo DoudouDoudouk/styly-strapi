@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_image_comparison_showcase_sections",
+  "info": {
+    "displayName": "ImageComparisonShowcaseSection",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.image-comparison",
+      "required": true
+    }
+  }
+}

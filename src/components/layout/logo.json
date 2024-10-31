@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_layout_logos",
+  "info": {
+    "displayName": "Logo",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "text": {
+      "type": "string"
+    }
+  }
+}

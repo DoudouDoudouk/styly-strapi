@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_sections_comments_sections",
+  "info": {
+    "displayName": "CommentsSection",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.comment-item"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_elements_feature_items",
+  "info": {
+    "displayName": "FeatureItem",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string"
+    }
+  }
+}

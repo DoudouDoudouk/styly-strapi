@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_video_embeds",
+  "info": {
+    "displayName": "Video Embed",
+    "icon": "stack",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "internalFile": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "videos"
+      ]
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "internal",
+        "external"
+      ],
+      "required": true,
+      "default": "external"
+    },
+    "externalUrl": {
+      "type": "string"
+    }
+  }
+}

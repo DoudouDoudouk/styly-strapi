@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_elements_comment_items",
+  "info": {
+    "displayName": "CommentItem",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "authorAvatar": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "authorName": {
+      "type": "string"
+    },
+    "authorUsername": {
+      "type": "string"
+    },
+    "comment": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

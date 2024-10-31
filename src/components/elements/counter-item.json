@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_elements_counter_items",
+  "info": {
+    "displayName": "CounterItem",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    }
+  }
+}
