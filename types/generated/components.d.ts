@@ -1,103 +1,5 @@
 import type { Struct, Schema } from '@strapi/strapi';
 
-export interface SharedVideoEmbed extends Struct.ComponentSchema {
-  collectionName: 'components_shared_video_embeds';
-  info: {
-    displayName: 'Video Embed';
-    icon: 'stack';
-    description: '';
-  };
-  attributes: {
-    internalFile: Schema.Attribute.Media<'videos'>;
-    type: Schema.Attribute.Enumeration<['internal', 'external']> &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'external'>;
-    externalUrl: Schema.Attribute.String;
-  };
-}
-
-export interface SharedSeo extends Struct.ComponentSchema {
-  collectionName: 'components_shared_seos';
-  info: {
-    displayName: 'Seo';
-    icon: 'stack';
-    description: '';
-  };
-  attributes: {
-    title: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 60;
-      }>;
-    description: Schema.Attribute.String &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 150;
-      }>;
-    keywords: Schema.Attribute.String;
-    canonicalUrl: Schema.Attribute.String;
-    index: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
-    follow: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
-    image: Schema.Attribute.Media<'images'>;
-    twitterCard: Schema.Attribute.Media<'images'>;
-  };
-}
-
-export interface SharedRichText extends Struct.ComponentSchema {
-  collectionName: 'components_shared_rich_texts';
-  info: {
-    displayName: 'Rich Text';
-    icon: 'stack';
-    description: '';
-  };
-  attributes: {
-    body: Schema.Attribute.RichText &
-      Schema.Attribute.Required &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor.CKEditor',
-        {
-          output: 'HTML';
-          preset: 'rich';
-        }
-      >;
-  };
-}
-
-export interface SharedPageLayout extends Struct.ComponentSchema {
-  collectionName: 'components_shared_page_layouts';
-  info: {
-    displayName: 'PageLayout';
-    icon: 'stack';
-  };
-  attributes: {
-    name: Schema.Attribute.Enumeration<['default', 'fullWidth', 'noSidebar']> &
-      Schema.Attribute.Required;
-  };
-}
-
-export interface SharedMeta extends Struct.ComponentSchema {
-  collectionName: 'components_shared_metas';
-  info: {
-    displayName: 'Meta';
-    icon: 'stack';
-  };
-  attributes: {
-    title: Schema.Attribute.String;
-    description: Schema.Attribute.String;
-  };
-}
-
-export interface SharedMedia extends Struct.ComponentSchema {
-  collectionName: 'components_shared_media';
-  info: {
-    displayName: 'Media';
-    icon: 'stack';
-    description: '';
-  };
-  attributes: {
-    file: Schema.Attribute.Media<'images'>;
-  };
-}
-
 export interface SectionsTestimonialsSection extends Struct.ComponentSchema {
   collectionName: 'components_sections_testimonials_sections';
   info: {
@@ -247,6 +149,104 @@ export interface SectionsBlogsSection extends Struct.ComponentSchema {
     title: Schema.Attribute.String;
     caption: Schema.Attribute.String;
     subtitle: Schema.Attribute.String;
+  };
+}
+
+export interface SharedVideoEmbed extends Struct.ComponentSchema {
+  collectionName: 'components_shared_video_embeds';
+  info: {
+    displayName: 'Video Embed';
+    icon: 'stack';
+    description: '';
+  };
+  attributes: {
+    internalFile: Schema.Attribute.Media<'videos'>;
+    type: Schema.Attribute.Enumeration<['internal', 'external']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'external'>;
+    externalUrl: Schema.Attribute.String;
+  };
+}
+
+export interface SharedSeo extends Struct.ComponentSchema {
+  collectionName: 'components_shared_seos';
+  info: {
+    displayName: 'Seo';
+    icon: 'stack';
+    description: '';
+  };
+  attributes: {
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 60;
+      }>;
+    description: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 150;
+      }>;
+    keywords: Schema.Attribute.String;
+    canonicalUrl: Schema.Attribute.String;
+    index: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    follow: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    image: Schema.Attribute.Media<'images'>;
+    twitterCard: Schema.Attribute.Media<'images'>;
+  };
+}
+
+export interface SharedRichText extends Struct.ComponentSchema {
+  collectionName: 'components_shared_rich_texts';
+  info: {
+    displayName: 'Rich Text';
+    icon: 'stack';
+    description: '';
+  };
+  attributes: {
+    body: Schema.Attribute.RichText &
+      Schema.Attribute.Required &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'rich';
+        }
+      >;
+  };
+}
+
+export interface SharedPageLayout extends Struct.ComponentSchema {
+  collectionName: 'components_shared_page_layouts';
+  info: {
+    displayName: 'PageLayout';
+    icon: 'stack';
+  };
+  attributes: {
+    name: Schema.Attribute.Enumeration<['default', 'fullWidth', 'noSidebar']> &
+      Schema.Attribute.Required;
+  };
+}
+
+export interface SharedMeta extends Struct.ComponentSchema {
+  collectionName: 'components_shared_metas';
+  info: {
+    displayName: 'Meta';
+    icon: 'stack';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+  };
+}
+
+export interface SharedMedia extends Struct.ComponentSchema {
+  collectionName: 'components_shared_media';
+  info: {
+    displayName: 'Media';
+    icon: 'stack';
+    description: '';
+  };
+  attributes: {
+    file: Schema.Attribute.Media<'images'>;
   };
 }
 
@@ -435,12 +435,6 @@ export interface ElementsButton extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
-      'shared.video-embed': SharedVideoEmbed;
-      'shared.seo': SharedSeo;
-      'shared.rich-text': SharedRichText;
-      'shared.page-layout': SharedPageLayout;
-      'shared.meta': SharedMeta;
-      'shared.media': SharedMedia;
       'sections.testimonials-section': SectionsTestimonialsSection;
       'sections.slider-gallery': SectionsSliderGallery;
       'sections.services-gallery-section': SectionsServicesGallerySection;
@@ -451,6 +445,12 @@ declare module '@strapi/strapi' {
       'sections.counter-section': SectionsCounterSection;
       'sections.comments-section': SectionsCommentsSection;
       'sections.blogs-section': SectionsBlogsSection;
+      'shared.video-embed': SharedVideoEmbed;
+      'shared.seo': SharedSeo;
+      'shared.rich-text': SharedRichText;
+      'shared.page-layout': SharedPageLayout;
+      'shared.meta': SharedMeta;
+      'shared.media': SharedMedia;
       'links.link': LinksLink;
       'layout.navbar': LayoutNavbar;
       'layout.logo': LayoutLogo;
