@@ -11,7 +11,8 @@
       "type": "enumeration",
       "enum": [
         "primary",
-        "secondary"
+        "secondary",
+        "highlighted"
       ],
       "default": "primary",
       "required": true

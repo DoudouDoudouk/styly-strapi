@@ -140,6 +140,16 @@
       },
       "component": "shared.meta",
       "required": true
+    },
+    "servicesGallerySection": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "sections.services-gallery-section"
     }
   }
 }
