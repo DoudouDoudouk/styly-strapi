@@ -19,11 +19,13 @@ export default [
             "'self'",
             "https://cdn.ckeditor.com",
             "http://13.36.34.5:1337",
+            "'unsafe-inline'",
           ],
           "script-src-elem": [
             "'self'",
             "https://cdn.ckeditor.com",
             "http://13.36.34.5:1337",
+            "'unsafe-inline'",
           ],
           "connect-src": ["'self'", "http://13.36.34.5:1337"],
         },
