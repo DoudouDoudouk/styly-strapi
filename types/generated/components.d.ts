@@ -207,6 +207,7 @@ export interface SectionsFaqSection extends Struct.ComponentSchema {
     faqs: Schema.Attribute.Component<'elements.faq-item', true>;
     title: Schema.Attribute.String;
     caption: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
   };
 }
 
@@ -247,20 +248,6 @@ export interface SectionsBlogsSection extends Struct.ComponentSchema {
     title: Schema.Attribute.String;
     caption: Schema.Attribute.String;
     subtitle: Schema.Attribute.String;
-  };
-}
-
-export interface LinksLink extends Struct.ComponentSchema {
-  collectionName: 'components_links_links';
-  info: {
-    displayName: 'Link';
-  };
-  attributes: {
-    text: Schema.Attribute.String & Schema.Attribute.Required;
-    url: Schema.Attribute.String;
-    newTab: Schema.Attribute.Boolean &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<false>;
   };
 }
 
@@ -321,6 +308,20 @@ export interface LayoutFooter extends Struct.ComponentSchema {
           preset: 'light';
         }
       >;
+  };
+}
+
+export interface LinksLink extends Struct.ComponentSchema {
+  collectionName: 'components_links_links';
+  info: {
+    displayName: 'Link';
+  };
+  attributes: {
+    text: Schema.Attribute.String & Schema.Attribute.Required;
+    url: Schema.Attribute.String;
+    newTab: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
   };
 }
 
@@ -453,10 +454,10 @@ declare module '@strapi/strapi' {
       'sections.counter-section': SectionsCounterSection;
       'sections.comments-section': SectionsCommentsSection;
       'sections.blogs-section': SectionsBlogsSection;
-      'links.link': LinksLink;
       'layout.navbar': LayoutNavbar;
       'layout.logo': LayoutLogo;
       'layout.footer': LayoutFooter;
+      'links.link': LinksLink;
       'elements.testimonial-item': ElementsTestimonialItem;
       'elements.service-gallery-item': ElementsServiceGalleryItem;
       'elements.image-comparison': ElementsImageComparison;

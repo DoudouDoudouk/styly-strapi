@@ -17,6 +17,9 @@
     },
     "caption": {
       "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
     }
   }
 }
