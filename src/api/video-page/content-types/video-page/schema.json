@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "video_pages",
+  "info": {
+    "singularName": "video-page",
+    "pluralName": "video-pages",
+    "displayName": "VideoPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "videos": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "elements.video-section-item"
+    }
+  }
+}

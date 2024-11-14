@@ -251,6 +251,20 @@ export interface SectionsBlogsSection extends Struct.ComponentSchema {
   };
 }
 
+export interface LinksLink extends Struct.ComponentSchema {
+  collectionName: 'components_links_links';
+  info: {
+    displayName: 'Link';
+  };
+  attributes: {
+    text: Schema.Attribute.String & Schema.Attribute.Required;
+    url: Schema.Attribute.String;
+    newTab: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+  };
+}
+
 export interface LayoutNavbar extends Struct.ComponentSchema {
   collectionName: 'components_layout_navbars';
   info: {
@@ -311,17 +325,15 @@ export interface LayoutFooter extends Struct.ComponentSchema {
   };
 }
 
-export interface LinksLink extends Struct.ComponentSchema {
-  collectionName: 'components_links_links';
+export interface ElementsVideoSectionItem extends Struct.ComponentSchema {
+  collectionName: 'components_elements_video_section_items';
   info: {
-    displayName: 'Link';
+    displayName: 'VideoSectionItem';
+    icon: 'stack';
   };
   attributes: {
-    text: Schema.Attribute.String & Schema.Attribute.Required;
-    url: Schema.Attribute.String;
-    newTab: Schema.Attribute.Boolean &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<false>;
+    title: Schema.Attribute.String;
+    video: Schema.Attribute.Component<'shared.video-embed', false>;
   };
 }
 
@@ -454,10 +466,11 @@ declare module '@strapi/strapi' {
       'sections.counter-section': SectionsCounterSection;
       'sections.comments-section': SectionsCommentsSection;
       'sections.blogs-section': SectionsBlogsSection;
+      'links.link': LinksLink;
       'layout.navbar': LayoutNavbar;
       'layout.logo': LayoutLogo;
       'layout.footer': LayoutFooter;
-      'links.link': LinksLink;
+      'elements.video-section-item': ElementsVideoSectionItem;
       'elements.testimonial-item': ElementsTestimonialItem;
       'elements.service-gallery-item': ElementsServiceGalleryItem;
       'elements.image-comparison': ElementsImageComparison;

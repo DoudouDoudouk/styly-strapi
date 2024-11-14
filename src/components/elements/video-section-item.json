@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_elements_video_section_items",
+  "info": {
+    "displayName": "VideoSectionItem",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "video": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.video-embed"
+    }
+  }
+}
