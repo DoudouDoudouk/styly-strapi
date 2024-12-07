@@ -2,7 +2,8 @@
   "collectionName": "components_sections_hero_sections",
   "info": {
     "displayName": "HeroSection",
-    "icon": "stack"
+    "icon": "stack",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -24,11 +25,12 @@
       "customField": "plugin::ckeditor.CKEditor"
     },
     "badge": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "highlightedButton": {
       "type": "component",
@@ -42,6 +44,13 @@
     },
     "subtext": {
       "type": "string"
+    },
+    "background": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

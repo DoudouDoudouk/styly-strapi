@@ -154,6 +154,7 @@ export interface SectionsHeroSection extends Struct.ComponentSchema {
   info: {
     displayName: 'HeroSection';
     icon: 'stack';
+    description: '';
   };
   attributes: {
     heading: Schema.Attribute.RichText &
@@ -177,6 +178,7 @@ export interface SectionsHeroSection extends Struct.ComponentSchema {
     highlightedButton: Schema.Attribute.Component<'elements.button', false>;
     action: Schema.Attribute.Component<'elements.button', false>;
     subtext: Schema.Attribute.String;
+    background: Schema.Attribute.Media<'images'>;
   };
 }
 
