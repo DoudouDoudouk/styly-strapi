@@ -1,5 +1,5 @@
 import type { StrapiApp } from "@strapi/strapi/admin";
-
+import { FillAndTranslateLocaleAction } from "./components";
 export default {
   config: {
     locales: [
@@ -24,7 +24,7 @@ export default {
       // 'sk',
       // 'sv',
       // 'th',
-      "tr",
+      // "tr",
       // 'uk',
       // 'vi',
       // 'zh-Hans',
@@ -32,6 +32,9 @@ export default {
     ],
   },
   bootstrap(app: StrapiApp) {
-    console.log(app);
+    const contentManager = app.getPlugin("content-manager");
+    contentManager.apis?.addDocumentHeaderAction([
+      FillAndTranslateLocaleAction,
+    ]);
   },
 };

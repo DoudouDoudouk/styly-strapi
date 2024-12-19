@@ -2,6 +2,9 @@ export default ({ env }) => ({
   auth: {
     secret: env('ADMIN_JWT_SECRET'),
   },
+  openApiKey: {
+    secret: env('STRAPI_ADMIN_OPENAI_KEY')
+  },
   apiToken: {
     salt: env('API_TOKEN_SALT'),
   },

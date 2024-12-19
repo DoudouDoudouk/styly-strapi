@@ -98,6 +98,20 @@ export interface SharedMedia extends Struct.ComponentSchema {
   };
 }
 
+export interface LinksLink extends Struct.ComponentSchema {
+  collectionName: 'components_links_links';
+  info: {
+    displayName: 'Link';
+  };
+  attributes: {
+    text: Schema.Attribute.String & Schema.Attribute.Required;
+    url: Schema.Attribute.String;
+    newTab: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+  };
+}
+
 export interface SectionsTestimonialsSection extends Struct.ComponentSchema {
   collectionName: 'components_sections_testimonials_sections';
   info: {
@@ -250,20 +264,6 @@ export interface SectionsBlogsSection extends Struct.ComponentSchema {
     title: Schema.Attribute.String;
     caption: Schema.Attribute.String;
     subtitle: Schema.Attribute.String;
-  };
-}
-
-export interface LinksLink extends Struct.ComponentSchema {
-  collectionName: 'components_links_links';
-  info: {
-    displayName: 'Link';
-  };
-  attributes: {
-    text: Schema.Attribute.String & Schema.Attribute.Required;
-    url: Schema.Attribute.String;
-    newTab: Schema.Attribute.Boolean &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<false>;
   };
 }
 
@@ -458,6 +458,7 @@ declare module '@strapi/strapi' {
       'shared.page-layout': SharedPageLayout;
       'shared.meta': SharedMeta;
       'shared.media': SharedMedia;
+      'links.link': LinksLink;
       'sections.testimonials-section': SectionsTestimonialsSection;
       'sections.slider-gallery': SectionsSliderGallery;
       'sections.services-gallery-section': SectionsServicesGallerySection;
@@ -468,7 +469,6 @@ declare module '@strapi/strapi' {
       'sections.counter-section': SectionsCounterSection;
       'sections.comments-section': SectionsCommentsSection;
       'sections.blogs-section': SectionsBlogsSection;
-      'links.link': LinksLink;
       'layout.navbar': LayoutNavbar;
       'layout.logo': LayoutLogo;
       'layout.footer': LayoutFooter;
