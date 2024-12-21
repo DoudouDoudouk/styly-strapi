@@ -18,7 +18,7 @@ export async function openApiTranslateArray(
       "https://api.openai.com/v1/chat/completions",
       {
         body: JSON.stringify({
-          model: "gpt-4",
+          model: "gpt-4o-mini",
           messages: [{ role: "user", content: prompt }],
         }),
         headers: {
