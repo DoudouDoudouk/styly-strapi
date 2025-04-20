@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_sections_hero_video_sections",
+  "info": {
+    "displayName": "HeroVideoSection",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "video": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.video-embed"
+    }
+  }
+}

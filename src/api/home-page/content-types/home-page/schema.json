@@ -150,6 +150,16 @@
         }
       },
       "component": "sections.services-gallery-section"
+    },
+    "heroVideo": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "sections.hero-video-section"
     }
   }
 }

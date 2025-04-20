@@ -98,20 +98,6 @@ export interface SharedMedia extends Struct.ComponentSchema {
   };
 }
 
-export interface LinksLink extends Struct.ComponentSchema {
-  collectionName: 'components_links_links';
-  info: {
-    displayName: 'Link';
-  };
-  attributes: {
-    text: Schema.Attribute.String & Schema.Attribute.Required;
-    url: Schema.Attribute.String;
-    newTab: Schema.Attribute.Boolean &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<false>;
-  };
-}
-
 export interface SectionsTestimonialsSection extends Struct.ComponentSchema {
   collectionName: 'components_sections_testimonials_sections';
   info: {
@@ -160,6 +146,27 @@ export interface SectionsImageComparisonShowcaseSection
   attributes: {
     items: Schema.Attribute.Component<'elements.image-comparison', true> &
       Schema.Attribute.Required;
+  };
+}
+
+export interface SectionsHeroVideo extends Struct.ComponentSchema {
+  collectionName: 'components_sections_hero_videos';
+  info: {
+    displayName: 'heroVideo';
+    icon: 'stack';
+    description: '';
+  };
+  attributes: {};
+}
+
+export interface SectionsHeroVideoSection extends Struct.ComponentSchema {
+  collectionName: 'components_sections_hero_video_sections';
+  info: {
+    displayName: 'HeroVideoSection';
+    icon: 'stack';
+  };
+  attributes: {
+    video: Schema.Attribute.Component<'shared.video-embed', false>;
   };
 }
 
@@ -264,6 +271,20 @@ export interface SectionsBlogsSection extends Struct.ComponentSchema {
     title: Schema.Attribute.String;
     caption: Schema.Attribute.String;
     subtitle: Schema.Attribute.String;
+  };
+}
+
+export interface LinksLink extends Struct.ComponentSchema {
+  collectionName: 'components_links_links';
+  info: {
+    displayName: 'Link';
+  };
+  attributes: {
+    text: Schema.Attribute.String & Schema.Attribute.Required;
+    url: Schema.Attribute.String;
+    newTab: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
   };
 }
 
@@ -458,17 +479,19 @@ declare module '@strapi/strapi' {
       'shared.page-layout': SharedPageLayout;
       'shared.meta': SharedMeta;
       'shared.media': SharedMedia;
-      'links.link': LinksLink;
       'sections.testimonials-section': SectionsTestimonialsSection;
       'sections.slider-gallery': SectionsSliderGallery;
       'sections.services-gallery-section': SectionsServicesGallerySection;
       'sections.image-comparison-showcase-section': SectionsImageComparisonShowcaseSection;
+      'sections.hero-video': SectionsHeroVideo;
+      'sections.hero-video-section': SectionsHeroVideoSection;
       'sections.hero-section': SectionsHeroSection;
       'sections.features-section': SectionsFeaturesSection;
       'sections.faq-section': SectionsFaqSection;
       'sections.counter-section': SectionsCounterSection;
       'sections.comments-section': SectionsCommentsSection;
       'sections.blogs-section': SectionsBlogsSection;
+      'links.link': LinksLink;
       'layout.navbar': LayoutNavbar;
       'layout.logo': LayoutLogo;
       'layout.footer': LayoutFooter;
